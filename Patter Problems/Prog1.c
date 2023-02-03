@@ -176,3 +176,132 @@
 // **********************************************************************************************
 
 // https://www.knowprogram.com/c-programming/pattern-programs-in-c/
+// Enter the number of rows: 5
+// * * * * *
+// * A B C *
+// * D E F *
+// * G H I *
+// * * * * *
+// #include <stdio.h>
+// void main()
+// {
+//     int count = 10;
+//     int inc=0;
+//     for (int i = 0; i < count; i++)
+//     {
+//             for (int j = 0; j < count; j++)
+//             {
+//                 if (j==0 || j==count-1 || i==0 || i==count-1)
+//                 {
+//                     printf("* ");
+//                 }
+//                 else
+//                 {
+//                     if (inc == 26)
+//                     {
+//                         inc=0;
+//                     }
+//                     printf("%c ",inc+65);
+
+//                     inc++;
+//                 }
+
+//             }
+//             printf("\n");
+//     }
+// }
+// **********************************************************************************************
+// *
+// * *
+// * * *
+// * * * *
+// * * * * *
+// #include <stdio.h>
+// void main()
+// {
+//     int count=5;
+//     for (int i = 0; i < count; i++)
+//     {
+//         for (int j = 0; j <= i; j++)
+//         {
+//             printf("*");
+//         }
+//         printf("\n");
+
+//     }
+
+// }
+// **********************************************************************************************
+// 1
+// 2 1
+// 3 2 1
+// 4 3 2 1
+// 5 4 3 2 1
+// #include <stdio.h>
+// void main()
+// {
+//     int count=5;
+//     for (int i = 1; i <= count; i++)
+//     {
+//         for (int j = i; j>=1 ; j--)
+//         {
+//             printf("%d ",j);
+//         }
+//         printf("\n");
+
+//     }
+
+// }
+// **********************************************************************************************
+// Enter number of rows: 5
+//      1
+//      2    3
+//      4    5    6
+//      7    8    9   10
+//     11   12   13   14   15
+// #include <stdio.h>
+// void main()
+// {
+//     int count=5;
+//     int inc=1;
+//     for (int i = 1; i <= count; i++)
+//     {
+//         for (int j = i; j>=1 ; j--)
+//         {
+//             printf("%d ",inc);
+//             inc++;
+//         }
+//         printf("\n");
+
+//     }
+
+// }
+// **********************************************************************************************
+// Enter the number of rows: 5
+// *
+// $ *
+// * $ *
+// $ * $ *
+// * $ * $ *
+#include <stdio.h>
+void main()
+{
+    int count = 10;
+    int inc = 1;
+    for (int i = 1; i <= count; i++)
+    {
+        for (int j = i; j >= 1; j--)
+        {
+            if (inc % 2 == 0)
+            {
+                printf("$ ");
+            }
+            else
+            {
+                 printf("* ");
+            }
+             inc++;
+        }
+        printf("\n");
+    }
+}
