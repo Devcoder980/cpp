@@ -283,25 +283,91 @@
 // * $ *
 // $ * $ *
 // * $ * $ *
-#include <stdio.h>
+// #include <stdio.h>
+// void main()
+// {
+//     int count = 10;
+//     int inc = 1;
+//     for (int i = 1; i <= count; i++)
+//     {
+//         for (int j = i; j >= 1; j--)
+//         {
+//             if (inc % 2 == 0)
+//             {
+//                 printf("$ ");
+//             }
+//             else
+//             {
+//                  printf("* ");
+//             }
+//              inc++;
+//         }
+//         printf("\n");
+//     }
+// }
+// **********************************************************************************************
+// Enter number of rows: 5
+//     *
+//    * *
+//   * * *
+//  * * * *
+// * * * * *
+// #include<stdio.h>
+// void main()
+// {
+//     int n=5;
+//     for (int r = 0; r < n; r++)
+//     {
+//         for (int c = 1; c < n-r; c++)
+//         {
+//             printf(" ");
+//         }
+//         for (int k = 1; k <= r; k++)
+//         {
+//             printf("@ ");
+//         }
+        
+//         printf("\n");
+//     }
+    
+// }
+// **********************************************************************************************
+// Enter number of rows: 5
+//      1
+//     121
+//    12321
+//   1234321
+//  123454321
+#include<stdio.h>
 void main()
 {
-    int count = 10;
-    int inc = 1;
-    for (int i = 1; i <= count; i++)
+    int n=5;
+    int a=0;
+    for (int r = 0; r <= n; r++)
     {
-        for (int j = i; j >= 1; j--)
+        for (int c = 0; c < n-r; c++)
         {
-            if (inc % 2 == 0)
+            printf("");
+        }
+        for (int k = 1; k <=(2*r-1); k++)
+        {
+            if (k<r)
             {
-                printf("$ ");
+                printf("%d",k);
+            }
+            else if (k==r)      
+            {
+                printf("%d",k);
+                a=k;
             }
             else
             {
-                 printf("* ");
+                printf("%d",--a);
             }
-             inc++;
+            
         }
         printf("\n");
+        
     }
+    
 }
